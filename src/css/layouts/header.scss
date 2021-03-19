@@ -1,0 +1,124 @@
+/* ====================== 2, Header ====================== */
+
+.header {
+    position: fixed;
+    padding: 20px 10px;
+    width: 100%;
+    z-index: 10;
+    @include max-breakpoint(768) {
+        background-color: white;
+    }
+    &.section {
+        background-color: white;
+        transition: 0.5s;
+        height: 70px;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        @include max-breakpoint(425) {
+            box-shadow: none;
+        }
+        .header__logo {
+            color: black;
+            &:hover {
+                color: #f4623a;
+            }
+        }
+        .list-item__link {
+            color: black;
+            @include max-breakpoint(768) {
+                color: #6c757d;
+            }
+            &:hover {
+                color: #f4623a;
+            }
+        }
+    }
+    &__logo {
+        color: #ffffffb3;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 30px;
+        font-family: 'Merriweather Sans', sans-serif;
+        &.logo__img {
+            width: auto;
+            transition: 0.5s;
+            color: black;
+        }
+        &:hover {
+            color: white;
+            cursor: pointer;
+        }
+        @include max-breakpoint(768) {
+            color: black;
+            &:hover {
+                color: #f4623a;
+            }
+        }
+    }
+    &__list {
+        @include max-breakpoint(768) {
+            position: absolute;
+            top: 70px;
+            left: 0;
+            max-height: 0vh;
+            overflow: hidden;
+            background-color: white;
+            width: 100%;
+            flex-direction: column;
+            transition: all ease-in-out 0.5s;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+        &.active {
+            max-height: 100vh;
+            @include max-breakpoint(768) {
+                .header__list {
+                    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+                }
+            }
+            @include max-breakpoint(425) {
+                .header__list {
+                    box-shadow: none;
+                }
+            }
+        }
+        &-item {
+            margin-left: 25px;
+            &:hover {
+                a {
+                    color: white;
+                }
+            }
+            @include max-breakpoint(768) {
+                padding: 12px 0;
+            }
+            .list-item__link {
+                color: #ffffffb3;
+                text-transform: uppercase;
+                font-size: 14px;
+                line-height: 22px;
+                font-weight: 700;
+                font-family: 'Merriweather Sans', sans-serif;
+                &.showColor {
+                    color: #f4623a;
+                }
+                &.link__text {
+                    color: black;
+                }
+                @include max-breakpoint(768) {
+                    color: #6c757d;
+                }
+            }
+        }
+    }
+    &__bars {
+        display: none;
+        padding: 5px 12px;
+        border: 2px solid rgb(33, 37, 41);
+        border-radius: 5px;
+        @include max-breakpoint(768) {
+            display: block;
+        }
+        i {
+            color: rgb(33, 37, 41);
+        }
+    }
+}

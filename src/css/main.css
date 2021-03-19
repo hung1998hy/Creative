@@ -1,0 +1,661 @@
+/**
+   * @param $direction: horizontal vertical both
+   example : @include center(both) || @include center(horizontal) || @include center(vertical)
+   */
+
+
+/* ===== Usage ===== */
+
+p {
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+}
+
+
+/* ===== Usage ===== */
+
+div {
+    background-image: url("cute-doggo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ====================== 1, Setting ====================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+ul {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.padding-tb {
+    padding: 128px 0;
+}
+
+.mg-auto {
+    margin: auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-item-center {
+    align-items: center !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ====================== 2, Header ====================== */
+
+.header {
+    position: fixed;
+    padding: 20px 10px;
+    width: 100%;
+    z-index: 10;
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        background-color: white;
+    }
+}
+
+.header.section {
+    background-color: white;
+    transition: 0.5s;
+    height: 70px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+@media only screen and (max-width: 425px) {
+    .header.section {
+        box-shadow: none;
+    }
+}
+
+.header.section .header__logo {
+    color: black;
+}
+
+.header.section .header__logo:hover {
+    color: #f4623a;
+}
+
+.header.section .list-item__link {
+    color: black;
+}
+
+@media only screen and (max-width: 768px) {
+    .header.section .list-item__link {
+        color: #6c757d;
+    }
+}
+
+.header.section .list-item__link:hover {
+    color: #f4623a;
+}
+
+.header__logo {
+    color: #ffffffb3;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.header__logo.logo__img {
+    width: auto;
+    transition: 0.5s;
+    color: black;
+}
+
+.header__logo:hover {
+    color: white;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .header__logo {
+        color: black;
+    }
+    .header__logo:hover {
+        color: #f4623a;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header__list {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        max-height: 0vh;
+        overflow: hidden;
+        background-color: white;
+        width: 100%;
+        flex-direction: column;
+        transition: all ease-in-out 0.5s;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+}
+
+.header__list.active {
+    max-height: 100vh;
+}
+
+@media only screen and (max-width: 768px) {
+    .header__list.active .header__list {
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .header__list.active .header__list {
+        box-shadow: none;
+    }
+}
+
+.header__list-item {
+    margin-left: 25px;
+}
+
+.header__list-item:hover a {
+    color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    .header__list-item {
+        padding: 12px 0;
+    }
+}
+
+.header__list-item .list-item__link {
+    color: #ffffffb3;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 700;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.header__list-item .list-item__link.showColor {
+    color: #f4623a;
+}
+
+.header__list-item .list-item__link.link__text {
+    color: black;
+}
+
+@media only screen and (max-width: 768px) {
+    .header__list-item .list-item__link {
+        color: #6c757d;
+    }
+}
+
+.header__bars {
+    display: none;
+    padding: 5px 12px;
+    border: 2px solid #212529;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .header__bars {
+        display: block;
+    }
+}
+
+.header__bars i {
+    color: #212529;
+}
+
+
+/* =========================== 9, Footer  =========================== */
+
+.footer {
+    background: #f8f9fa;
+    padding: 48px 0;
+}
+
+.footer__text {
+    text-align: center;
+    color: #6c757d;
+    font-weight: normal;
+    font-size: 12.8px;
+}
+
+
+/* ====================== 3, Banner ====================== */
+
+.banner {
+    background: url("../img/bg-masthead.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-top: 170px;
+}
+
+.banner__bg {
+    position: absolute;
+    background-color: #4e4239;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+.banner__heading {
+    color: white;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 67px;
+    font-family: 'Merriweather Sans', sans-serif;
+    text-align: center;
+    margin: auto;
+    align-self: flex-end;
+}
+
+@media only screen and (max-width: 768px) {
+    .banner__heading {
+        font-size: 36px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .banner__heading {
+        font-size: 36px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .banner__heading {
+        line-height: 40px;
+        font-size: 36px;
+    }
+}
+
+.banner__divider {
+    width: 3.25rem;
+    border: 2px solid #f4623a;
+    margin: 24px auto;
+}
+
+.banner__subheading p {
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    line-height: 28px;
+    text-align: center;
+    color: #ffffffbf;
+    word-spacing: -1px;
+}
+
+@media only screen and (max-width: 768px) {
+    .banner__subheading p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .banner__subheading p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .banner__subheading p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+
+.banner__btn {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.banner__btn button {
+    cursor: pointer;
+    border: 2px solid #4e4239;
+    background: #f4623a;
+    border-radius: 50px;
+    transition: 0.5s ease-in-out;
+    padding: 20px 40px;
+    outline: none;
+}
+
+.banner__btn button:hover {
+    color: #fff;
+    background-color: #f24516;
+}
+
+.banner__btn button a {
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    line-height: 20px;
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-transform: uppercase;
+}
+
+
+/* ====================== 4, About ====================== */
+
+.about {
+    background: #f4623a;
+}
+
+.about__heading {
+    color: white;
+    font-size: 32px;
+    font-weight: 500;
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    line-height: 38px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.about__divider {
+    width: 3.25rem;
+    border: 2px solid white;
+    margin: 24px auto;
+}
+
+.about__subheading {
+    font-weight: 400;
+    text-align: center;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 24px;
+    font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    word-spacing: -2px;
+}
+
+@media only screen and (max-width: 576px) {
+    .about__subheading {
+        padding: 0 35px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .about__subheading {
+        padding: 0;
+    }
+}
+
+.about__btn {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.about__btn button {
+    cursor: pointer;
+    border: none;
+    background: white;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+    padding: 20px 40px;
+    outline: none;
+}
+
+.about__btn button:hover {
+    background: #b4bbc2;
+}
+
+.about__btn button a {
+    font-size: 14px;
+    font-weight: 700;
+    color: black;
+    line-height: 20px;
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-transform: uppercase;
+}
+
+
+/* ====================== 5, Services ====================== */
+
+.service__heading {
+    color: black;
+    font-size: 32px;
+    font-weight: 500;
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    line-height: 38px;
+    text-align: center;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.service__divider {
+    width: 3.25rem;
+    border: 2px solid #f4623a;
+    margin: 24px auto;
+}
+
+.service__item {
+    margin-top: 48px;
+}
+
+.service__item-icon {
+    color: #f4623a;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.service__item-icon i {
+    font-size: 64px;
+}
+
+.service__item-heading {
+    color: #212529;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-align: center;
+    margin: 15px 0;
+}
+
+.service__item-subheading {
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    color: #6c757d;
+    font-weight: 400;
+    font-family: 'Merriweather', sans-serif;
+}
+
+
+/* ====================== 6, Portfolio ====================== */
+
+.port__img {
+    margin: -2px -15px;
+    position: relative;
+    height: 100%;
+}
+
+.port__img:hover .port__img-category {
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+.port__img img {
+    max-width: 100%;
+}
+
+.port__img-category {
+    background: #f4623a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+}
+
+.port__img-category .img-category__haeding {
+    display: inline-block;
+    font-family: 'Merriweather Sans';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+
+.port__img-category .img-category__subhaeding {
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Merriweather';
+    font-size: 19px;
+    line-height: 29px;
+    color: white;
+}
+
+
+/* =========================== 7, Client - Free Dowload  =========================== */
+
+.freedow {
+    background: #343a40;
+    margin: auto;
+    margin-top: -2px;
+}
+
+.freedow__heading {
+    color: white;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    font-family: 'Merriweather Sans';
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.freedow__btn {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.freedow__btn button {
+    border: none;
+    background: white;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+    padding: 20px 40px;
+}
+
+.freedow__btn button:hover {
+    background: #a5b0b9;
+}
+
+.freedow__btn button a {
+    font-size: 14px;
+    font-weight: 700;
+    color: black;
+    line-height: 20px;
+    font-family: 'Merriweather Sans';
+    text-transform: uppercase;
+}
+
+
+/* =========================== 8, Contact  =========================== */
+
+.contact__heading {
+    text-align: center;
+    font-size: 32px;
+    line-height: 38px;
+    color: #212529;
+    font-weight: 500;
+    font-family: 'Merriweather Sans', sans-serif;
+    text-transform: capitalize;
+}
+
+.contact__divider {
+    width: 3.25rem;
+    border: 2px solid #f4623a;
+    margin: 24px auto;
+}
+
+.contact__subheading {
+    color: #6c757d;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Merriweather';
+    text-align: center;
+}
+
+.contact__icon {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact__icon i {
+    text-align: center;
+    color: #6c757d;
+}
+
+.contact__icon-info {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Merriweather';
+    line-height: 24px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.contact__icon-info .icon-info__link {
+    color: #f4623a;
+}
+
+.contact__icon-info .icon-info__link:hover {
+    text-decoration: underline;
+}
+
+
+/*# sourceMappingURL=main.css.map */

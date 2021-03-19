@@ -1,0 +1,39 @@
+/* =========================== 7, Client - Free Dowload  =========================== */
+
+.freedow {
+    background: #343a40;
+    margin: auto;
+    margin-top: -2px;
+    &__heading {
+        color: white;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 38px;
+        font-family: 'Merriweather Sans';
+        text-align: center;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+    }
+    &__btn {
+        text-align: center;
+        margin-top: 40px;
+        button {
+            border: none;
+            background: white;
+            border-radius: 50px;
+            transition: 0.3s ease-in-out;
+            padding: 20px 40px;
+            &:hover {
+                background: #a5b0b9;
+            }
+            a {
+                font-size: 14px;
+                font-weight: 700;
+                color: black;
+                line-height: 20px;
+                font-family: 'Merriweather Sans';
+                text-transform: uppercase;
+            }
+        }
+    }
+}

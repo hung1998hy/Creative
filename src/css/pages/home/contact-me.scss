@@ -1,0 +1,49 @@
+/* =========================== 8, Contact  =========================== */
+
+.contact {
+    &__heading {
+        text-align: center;
+        font-size: 32px;
+        line-height: 38px;
+        color: #212529;
+        font-weight: 500;
+        font-family: 'Merriweather Sans', sans-serif;
+        text-transform: capitalize;
+    }
+    &__divider {
+        width: 3.25rem;
+        border: 2px solid #f4623a;
+        margin: 24px auto;
+    }
+    &__subheading {
+        color: #6c757d;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: 'Merriweather';
+        text-align: center;
+    }
+    &__icon {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        i {
+            text-align: center;
+            color: #6c757d;
+        }
+        &-info {
+            font-size: 16px;
+            font-weight: 400;
+            font-family: 'Merriweather';
+            line-height: 24px;
+            text-align: center;
+            margin-top: 15px;
+            .icon-info__link {
+                color: #f4623a;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
